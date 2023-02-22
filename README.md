@@ -1,4 +1,6 @@
 # carbon-url
+A chrome extension that displays the users current window carbon emission data
+
 
 ## Project setup
 ```
@@ -19,6 +21,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
