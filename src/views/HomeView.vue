@@ -20,22 +20,18 @@
       />
     </div>
     <div
-      v-else-if="hasError"
-      class="grid place-items-center text-center px-4"
-    >
-      Could Not Load Stats For: {{ tabUrl }}
-    </div>
-    <div
       v-else
-      class="grid h-20 place-items-center text-center px-4"
+      class="break-all grid place-items-center text-center px-4"
     >
-      <div
-        class="mb-2"
-      >
-        Fetching Stats For: {{ tabUrl }}
+      {{ hasError ? 'Could Not Load Stats For' : 'Fetching Stats For' }}:
+      <div>
+        {{ tabUrl }}
       </div>
-      <ProgressCircle />
-    </div>    
+      <ProgressCircle
+        v-if="isLoading"
+        class="mt-2"
+      />
+    </div>   
   </div>
 </template>
 
